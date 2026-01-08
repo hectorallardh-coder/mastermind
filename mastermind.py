@@ -169,3 +169,10 @@ while game_on:
 
         guess_count += 1
         table = update_table(guesses_list, feedback_list, 18)
+
+        
+        # Kollar om spelaren förlorade (använde alla gissningar)
+        if guess_count == 12:
+            game_on = False
+            print(f"Det gick inte väldigt bra. mina hemliga siffror var {secret_numbers}")
+
